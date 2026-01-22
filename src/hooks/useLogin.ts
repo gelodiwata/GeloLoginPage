@@ -14,6 +14,23 @@ export default function useLogin() {
   const [loginState, setLoginState] = useState(true)
 
   /**
+   * CustomValidate for mocking purposes
+   * @param mock_username string
+   * @param mock_password string
+   */
+  function customValidate(mock_username: string, mock_password: string) {
+    if (username.trim() !== mock_username && password.trim() !== mock_password) {
+      setError('Invalid username and password')
+    } else if (username.trim() !== mock_username) {
+      setError('Invalid username')
+    } else if (password.trim() !== mock_password) {
+      setError('Invalid password')
+    } else {
+      setLoginState(false)
+    }
+  }
+
+  /**
    * Validates each field before setting the login state
    */
   function validateLogin(): void {
@@ -24,7 +41,8 @@ export default function useLogin() {
     } else if (password.trim() === '') {
       setError('Please type your password')
     } else {
-      setLoginState(false)
+      // Change to your desired values for mocking
+      customValidate('admin', 'adminPass')
     }
   }
 
