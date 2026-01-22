@@ -5,6 +5,10 @@ import FormField from './components/FormField'
 import ErrorLabel from './components/ErrorLabel'
 import useLogin from './hooks/useLogin'
 
+/**
+ * Sample Login Form
+ * 👨🏻‍🍳 tastefully built by Angelito Diwata - 01/22/2026
+ */
 function App() {
 
   const { loginState, error, setLoginState, setUsername, setPassword, validateLogin } = useLogin()
@@ -12,6 +16,7 @@ function App() {
   return (
     <>
       {
+        // If Login State is true, login is displayed, else you are logged in.
         loginState ?
           <LoginForm onSubmit={validateLogin}>
             <ErrorLabel label={error} />

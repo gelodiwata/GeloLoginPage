@@ -1,5 +1,9 @@
 import type { TextInputProps } from "../interfaces/LoginPage";
 
+/**
+ * Text Input Component
+ * @param props see TextInputProps
+ */
 export default function TextInput(props: TextInputProps) {
     return (
         <input

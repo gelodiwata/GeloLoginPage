@@ -6,7 +6,7 @@ export interface FormFieldProps {
 }
 
 export interface LabelProps {
-    label: string;
+    label?: string;
     for: string
 }
 
