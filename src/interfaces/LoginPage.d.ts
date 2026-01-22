@@ -21,3 +21,8 @@ export interface TextInputProps {
     placeholder: string;
     onChange: (value: string) => void
 }
+
+export interface LoginFormProps {
+    children: React.ReactNode;
+    onSubmit: Function
+}
